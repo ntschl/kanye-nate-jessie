@@ -19,7 +19,8 @@ func main() {
 	r := gin.Default()
 	r.GET("/kanye", func(c *gin.Context) {
 		c.JSON(200, gin.H{
-			"Wisdom": getQuote(),
+			"Inspirational Wisdom": getQuote(),
+			"Team":                 "Gold Team Rules!",
 		})
 	})
 	r.Run() //default's on 8080
@@ -45,6 +46,6 @@ func getQuote() string {
 		panic(err)
 	}
 
-	return q.Quote + " - Jessie & Nate!!!"
+	return q.Quote
 	// return string(responseData)
 }
